@@ -26,6 +26,17 @@
             height: auto;
             border-radius: 8px;
         }
+       .dark-mode {
+           background-color: #1e1e2e;
+           color: #f5e0dc;
+        }
+       img {
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+       img:hover {
+           transform: scale(1.05);
+           box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+           }
   </style>
 </head>
 <body>
@@ -42,5 +53,11 @@
     
     <p>Something probably went wrong here and I know how to fix it now!</p>
     <h4>Something strange</h4>
+<button id="themeToggle" onclick="toggleTheme()"> Toggle Dark Mode</button>
 </body>
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
 </html>
