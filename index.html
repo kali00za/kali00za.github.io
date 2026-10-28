@@ -54,10 +54,27 @@
     <p>Something probably went wrong here and I know how to fix it now!</p>
     <h4>Something strange</h4>
 <button id="themeToggle" onclick="toggleTheme()"> Toggle Dark Mode</button>
+<div style="margin-top: 30px; text-align: center;">
+  <h3>Did You Know?</h3>
+  <p id="factText">Click the button below for a cat fact!</p>
+  <button onclick="getCatFact()">🐾 Tell Me A Cat Fact!</button>
+</div>
 </body>
 <script>
   function toggleTheme() {
     document.body.classList.toggle("dark-mode");
+  }
+  const facts = [
+    "Cats sleep for 70% of their lives!",
+    "A group of cats is called a 'clowder'.",
+    "Cats can make over 100 different vocal sounds!",
+    "A cat's purr can help heal bones and muscles.",
+    "Cats have 32 muscles in each ear!"
+  ];
+
+  function getCatFact() {
+    const randomFact = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById("factText").innerText = randomFact;
   }
 </script>
 </html>
